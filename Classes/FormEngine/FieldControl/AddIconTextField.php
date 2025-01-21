@@ -16,7 +16,7 @@ class AddIconTextField extends AbstractNode
 //        }
         return [
             'iconIdentifier' => 'actions-header',
-            'title' => "Add html",
+            'title' => "Add html to input",
             'linkAttributes' => [
                 'class' => 'sup-header-btn',
             ],
