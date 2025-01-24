@@ -11,18 +11,20 @@ class AddIconTextField extends AbstractNode
 {
     public function render(): array
     {
-//        if(!$GLOBALS['BE_USER']->check('custom_options', 'tx_supheader_features:enable_supbutton_header')) {
-//            return [];
-//        }
         return [
-            'iconIdentifier' => 'actions-header',
-            'title' => "Add html to input",
+            'iconIdentifier' => 'content-special-html',
+            'title' => "LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:label.form.button",
             'linkAttributes' => [
                 'class' => 'sup-header-btn',
+                'data-field-name' => $this->data['parameterArray']['itemFormElName'],
+                'data-allowed-tags' => 'sup,sub,br,strong',
             ],
-//            'javaScriptModules' => [
-//                JavaScriptModuleInstruction::create('@autodudes/ai-suite/metadata/generate-suggestions.js')
-//            ],
+            'additionalInlineLanguageLabelFiles' => [
+                'EXT:sup_header/Resources/Private/Language/locallang.xlf',
+            ],
+            'javaScriptModules' => [
+                JavaScriptModuleInstruction::create('@traw/sup-header/generate-html.js'),
+            ],
         ];
     }
 }

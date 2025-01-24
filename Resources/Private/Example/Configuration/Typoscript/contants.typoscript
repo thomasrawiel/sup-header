@@ -1,0 +1,5 @@
+plugin.tx_myext {
+    settings {
+        allowedHeaderTags = <sub><sup><br><strong><em><small>
+    }
+}

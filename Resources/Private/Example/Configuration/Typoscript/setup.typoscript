@@ -1,0 +1,5 @@
+lib.contentElement {
+    settings {
+        allowedHeaderTags = {$plugin.tx_myext.settings.allowedHeaderTags}
+    }
+}
