@@ -24,7 +24,7 @@ final class AllowedTagsEvent
     /**
      * @return array
      */
-    public function getAllowedTags() {
+    public function getAllowedTags(): array {
         return $this->allowedTags;
     }
 
@@ -43,7 +43,7 @@ final class AllowedTagsEvent
      *
      * @return void
      */
-    public function addAllowedTag($tag) {
+    public function addAllowedTag(string $tag) {
         $this->allowedTags[] = $tag;
     }
 
@@ -52,7 +52,7 @@ final class AllowedTagsEvent
      *
      * @return void
      */
-    public function removeAllowedTag($tag) {
+    public function removeAllowedTag(string $tag) {
         $key = array_search($tag, $this->allowedTags, true);
         if ($key !== false) {
             unset($this->allowedTags[$key]);

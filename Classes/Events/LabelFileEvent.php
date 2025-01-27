@@ -56,7 +56,7 @@ final class LabelFileEvent
      */
     public function removeLabelFile(string $labelFile): void
     {
-        $key = array_search($tag, $this->labelFiles, true);
+        $key = array_search($labelFile, $this->labelFiles, true);
         if ($key !== false) {
             unset($this->labelFiles[$key]);
         }
