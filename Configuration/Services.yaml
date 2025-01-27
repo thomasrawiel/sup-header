@@ -1,0 +1,13 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  TRAW\SupHeader\:
+    resource: '../Classes/*'
+
+  TRAW\SupHeader\Listener\BootCompleted:
+    tags:
+      - name: event.listener
+        identifier: 'tx-supheader-boot-completed'

@@ -2,7 +2,6 @@ class GenerateHtml {
     constructor() {
         this.addEventListener();
     }
-
     addEventListener() {
         document.querySelectorAll('.sup-header-btn').forEach((button) => {
             button.addEventListener('click', (e) => {
@@ -12,7 +11,7 @@ class GenerateHtml {
 
                 e.target.closest('.btn-group').style.position = 'relative';
                 e.target.closest('.btn-group').appendChild(dropdown);
-                
+
                 dropdown.style.position = 'absolute';
                 dropdown.style.right = 0;
                 dropdown.style.top = 0;
@@ -23,13 +22,11 @@ class GenerateHtml {
                         document.removeEventListener('click', closeListener);
                     }
                 };
-
                 // Hide the dropdown when clicking elsewhere
                 document.addEventListener('click', closeListener);
             });
         });
     }
-
     createDropdown(button) {
         let dropdown = document.createElement('div');
         dropdown.className = 'dropdown-menu show';
@@ -38,14 +35,17 @@ class GenerateHtml {
         tags.forEach(tag => {
             let option = document.createElement('div');
             option.className = 'dropdown-item';
-            option.textContent = `${tag}`;
+            if (TYPO3.lang['supheader.label.' + tag]) {
+                option.textContent = TYPO3.lang['supheader.label.' + tag];
+            } else {
+                option.textContent = tag;
+            }
+            option.textContent += ` <${tag}>`
             option.style.cursor = 'pointer';
-            option.style.padding = '5px 10px';
             option.addEventListener('click', () => {
                 this.applyTag(tag, button.getAttribute('data-field-name'));
                 dropdown.remove();
             });
-
             dropdown.appendChild(option);
         });
 
@@ -79,5 +79,4 @@ class GenerateHtml {
         }
     }
 }
-
 export default new GenerateHtml();

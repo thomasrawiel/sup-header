@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" datatype="plaintext" original="EXT:supheader/Resources/Private/Language/locallang.xlf"
-          date="2025-01-26T20:22:32Z" product-name="sup_header">
+    <file source-language="en" target-language="de" datatype="plaintext" original="EXT:supheader/Resources/Private/Language/locallang.xlf" date="2025-01-26T20:22:32Z" product-name="sup_header">
         <header/>
         <body>
             <trans-unit id="label.form.button">
                 <source>Add html to field</source>
+                <target>Html zum Feld hinzufügen</target>
             </trans-unit>
             <trans-unit id="supheader.label.sup" resname="supheader.label.sup">
                 <source>Superscript</source>
+                <target>Hochgestellt</target>
             </trans-unit>
             <trans-unit id="supheader.label.sub" resname="supheader.label.sub">
                 <source>Subscript</source>
+                <target>Tiefgestellt</target>
             </trans-unit>
             <trans-unit id="supheader.label.br" resname="supheader.label.br">
                 <source>Line break</source>
+                <target>Zeilenumbruch</target>
             </trans-unit>
         </body>
     </file>
