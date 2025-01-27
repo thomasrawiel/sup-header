@@ -10,7 +10,7 @@
              project-issues="https://github.com/thomasrawiel/sup-header/issues"
              edit-on-github-branch="main"
              edit-on-github="thomasrawiel/sup-header"
-             typo3-core-preferred="1.0"
+             typo3-core-preferred="13.4"
              interlink-shortcode="thomasrawiel/sup-header"
   />
   <project title="Sup Header"
