@@ -2,6 +2,7 @@ class GenerateHtml {
     constructor() {
         this.addEventListener();
     }
+
     addEventListener() {
         document.querySelectorAll('.sup-header-btn').forEach((button) => {
             button.addEventListener('click', (e) => {
@@ -27,6 +28,7 @@ class GenerateHtml {
             });
         });
     }
+
     createDropdown(button) {
         let dropdown = document.createElement('div');
         dropdown.className = 'dropdown-menu show';
@@ -55,6 +57,7 @@ class GenerateHtml {
     applyTag(tag, fieldName) {
         // Get the button's associated field
         let field = document.querySelector('[data-formengine-input-name="' + fieldName + '"]');
+        let hiddenField = document.querySelector('[name="' + fieldName + '"]');
         field.focus();
 
         // Get the current selection in the input field
@@ -77,6 +80,9 @@ class GenerateHtml {
                 field.selectionStart = field.selectionEnd = start + tag.length + 2; // Position inside the opening tag
             }
         }
+
+        hiddenField.value = field.value;
     }
 }
+
 export default new GenerateHtml();
