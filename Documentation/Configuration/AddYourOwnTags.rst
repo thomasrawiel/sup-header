@@ -45,9 +45,12 @@ To add your own tags, you will need to create an `EventListener <https://docs.ty
     If you add a tag but don't add a label for that tag, the dropdown will display the tag name followed by the html notation
     e.g. `abbr <abbr>`
 
-.. note::
     If you add a label, the dropdown will display the label followed by the html notation
     e.g. `Abbreviation <abbr>`
+
+.. hint::
+    Some tags, like `script`, `iframe` and others are always automatically removed, from the generation of the dropdown whether you allow them or not.
+
 
 Add or change labels
 -----------

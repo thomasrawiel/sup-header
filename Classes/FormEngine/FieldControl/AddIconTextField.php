@@ -14,14 +14,23 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 final class AddIconTextField extends AbstractNode
 {
+    private const disallowdTags = ['script', 'iframe', 'object', 'embed', 'applet', 'form', 'button', 'input', 'link', 'meta', 'style', 'base', 'textarea', 'noscript', 'svg', 'math', 'isindex', 'marquee',];
+
     /**
      * @return array
      */
     public function render(): array
     {
         $allowedTags = ['sup', 'sub', 'br'];
+        $globallyDisallowedTags = self::disallowdTags;
 
         $event = GeneralUtility::makeInstance(EventDispatcher::class)->dispatch(new AllowedTagsEvent($allowedTags));
+
+        $finalAllowedTags = array_map(function ($tag) use ($globallyDisallowedTags) {
+            return !in_array($tag, $globallyDisallowedTags) ? $tag : '';
+        }, $event->getAllowedTags());
+
+        $event->setAllowedTags(array_filter($finalAllowedTags));
 
         return [
             'iconIdentifier' => 'tx-sup-header-btn',
