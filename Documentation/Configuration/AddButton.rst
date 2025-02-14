@@ -18,7 +18,7 @@ Add the button in your extension's TCA Overrides.
             $GLOBALS['TCA']['tt_content']['columns']['header']['config'],
             [
                 'fieldControl' => [
-                    'importControl' => [
+                    'tx_supheader_control' => [
                         'renderType' => 'addIconTextField',
                     ],
                 ],
@@ -28,7 +28,7 @@ Add the button in your extension's TCA Overrides.
             $GLOBALS['TCA']['tt_content']['columns']['subheader']['config'],
             [
                 'fieldControl' => [
-                    'importControl' => [
+                    'tx_supheader_control' => [
                         'renderType' => 'addIconTextField',
                     ],
                 ],
