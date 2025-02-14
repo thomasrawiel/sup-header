@@ -52,7 +52,7 @@ To add your own tags, you will need to create an `EventListener <https://docs.ty
     Some tags, like `script`, `iframe` and others are always automatically removed, from the generation of the dropdown whether you allow them or not.
 
 
-Add or change labels
+Add or change labels (PSR-14 event)
 -----------
 
 If you want to add a label for your tag or change the default labels, add another EventListener that listens to the `LabelFileEvent`
@@ -95,4 +95,17 @@ If you want to add a label for your tag or change the default labels, add anothe
 
 `TYPO3 docs - Events <https://docs.typo3.org/permalink/t3coreapi:extension-development-events>`_
 
+Add or change labels (locallangOverride)
+-----------
 
+There's also the possibility to override the locallang labels. `TYPO3 docs - Custom translations <https://docs.typo3.org/permalink/t3coreapi:xliff-translating-custom>`_
+
+In your ext_localconf.php add
+
+.. code-block:: php
+    :caption: ext_localconf.php
+
+     $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:sup_header/Resources/Private/Language/locallang.xlf'][]
+            = 'EXT:my_ext/Resources/Private/Language/Overrides/locallang-supheader.xlf';
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['de']['EXT:sup_header/Resources/Private/Language/locallang.xlf'][]
+        = 'EXT:my_ext/Resources/Private/Language/Overrides/de.locallang-supheader.xlf';
