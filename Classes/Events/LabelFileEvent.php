@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace TRAW\SupHeader\Events;
@@ -31,8 +32,6 @@ final class LabelFileEvent
 
     /**
      * @param array $labelFiles
-     *
-     * @return void
      */
     public function setLabelFiles(array $labelFiles): void
     {
@@ -41,8 +40,6 @@ final class LabelFileEvent
 
     /**
      * @param string $labelFile
-     *
-     * @return void
      */
     public function addLabelFile(string $labelFile): void
     {
@@ -51,8 +48,6 @@ final class LabelFileEvent
 
     /**
      * @param string $labelFile
-     *
-     * @return void
      */
     public function removeLabelFile(string $labelFile): void
     {

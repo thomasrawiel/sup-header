@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace TRAW\SupHeader\Listener;
@@ -17,7 +18,6 @@ final class BootCompleted
     /**
      * @param BootCompletedEvent $event
      *
-     * @return void
      * @throws \Exception
      */
     public function __invoke(BootCompletedEvent $event): void

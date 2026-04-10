@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace TRAW\SupHeader\FormEngine\FieldControl;
@@ -14,7 +15,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 final class AddIconTextField extends AbstractNode
 {
-    private const disallowdTags = ['script', 'iframe', 'object', 'embed', 'applet', 'form', 'button', 'input', 'link', 'meta', 'style', 'base', 'textarea', 'noscript', 'svg', 'math', 'isindex', 'marquee',];
+    private const disallowdTags = ['script', 'iframe', 'object', 'embed', 'applet', 'form', 'button', 'input', 'link', 'meta', 'style', 'base', 'textarea', 'noscript', 'svg', 'math', 'isindex', 'marquee'];
 
     /**
      * @return array
@@ -34,7 +35,7 @@ final class AddIconTextField extends AbstractNode
 
         return [
             'iconIdentifier' => 'tx-sup-header-btn',
-            'title' => "LLL:EXT:sup_header/Resources/Private/Language/locallang.xlf:label.form.button",
+            'title' => 'LLL:EXT:sup_header/Resources/Private/Language/locallang.xlf:label.form.button',
             'linkAttributes' => [
                 'class' => 'sup-header-btn',
                 'data-field-name' => $this->data['parameterArray']['itemFormElName'],
