@@ -16,8 +16,10 @@ class GenerateHtml {
                 e.target.closest('.btn-group').appendChild(dropdown);
 
                 dropdown.style.position = 'absolute';
-                dropdown.style.right = 0;
+                dropdown.style.left = 0;
                 dropdown.style.top = 0;
+                dropdown.style.zIndex = 9999;
+                dropdown.style.display = 'block';
 
                 const closeListener = (event) => {
                     if (!dropdown.contains(event.target)) {
@@ -33,7 +35,7 @@ class GenerateHtml {
 
     createDropdown(button) {
         let dropdown = document.createElement('div');
-        dropdown.className = 'dropdown-menu show';
+        dropdown.className = 'dropdown-menu';
 
         let tags = button.getAttribute('data-allowed-tags').split(',');
         tags.forEach(tag => {
