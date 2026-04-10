@@ -7,15 +7,15 @@
                 <source>Add html to field</source>
                 <target>Html zum Feld hinzufügen</target>
             </trans-unit>
-            <trans-unit id="supheader.label.sup" resname="supheader.label.sup">
+            <trans-unit id="sup_header.label.sup" resname="supheader.label.sup">
                 <source>Superscript</source>
                 <target>Hochgestellt</target>
             </trans-unit>
-            <trans-unit id="supheader.label.sub" resname="supheader.label.sub">
+            <trans-unit id="sup_header.label.sub" resname="supheader.label.sub">
                 <source>Subscript</source>
                 <target>Tiefgestellt</target>
             </trans-unit>
-            <trans-unit id="supheader.label.br" resname="supheader.label.br">
+            <trans-unit id="sup_header.label.br" resname="supheader.label.br">
                 <source>Line break</source>
                 <target>Zeilenumbruch</target>
             </trans-unit>

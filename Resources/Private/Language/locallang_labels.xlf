@@ -4,16 +4,13 @@
           date="2025-01-26T20:22:32Z" product-name="sup_header">
         <header/>
         <body>
-            <trans-unit id="label.form.button">
-                <source>Add html to field</source>
-            </trans-unit>
-            <trans-unit id="sup_header.label.sup" resname="supheader.label.sup">
+            <trans-unit id="sup" resname="supheader.label.sup">
                 <source>Superscript</source>
             </trans-unit>
-            <trans-unit id="sup_header.label.sub" resname="supheader.label.sub">
+            <trans-unit id="sub" resname="supheader.label.sub">
                 <source>Subscript</source>
             </trans-unit>
-            <trans-unit id="sup_header.label.br" resname="supheader.label.br">
+            <trans-unit id="br" resname="supheader.label.br">
                 <source>Line break</source>
             </trans-unit>
         </body>

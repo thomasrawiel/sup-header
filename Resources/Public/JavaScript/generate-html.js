@@ -1,3 +1,5 @@
+import labels from '@traw/sup-header/labels.js';
+
 class GenerateHtml {
     constructor() {
         this.addEventListener();
@@ -37,11 +39,14 @@ class GenerateHtml {
         tags.forEach(tag => {
             let option = document.createElement('div');
             option.className = 'dropdown-item';
-            if (TYPO3.lang['supheader.label.' + tag]) {
-                option.textContent = TYPO3.lang['supheader.label.' + tag];
-            } else {
+
+            try {
+                console.log('check language', labels.get(tag));
+                option.textContent = labels.get(tag);
+            }catch (error) {
                 option.textContent = tag;
             }
+
             option.textContent += ` <${tag}>`
             option.style.cursor = 'pointer';
             option.addEventListener('click', () => {
